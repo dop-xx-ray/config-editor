@@ -1,0 +1,153 @@
+ body {
+     font-family: Inter, sans-serif;
+ }
+
+ /* Neomorphic design */
+ .container {
+     display: flex;
+     width: 20rem;
+     margin: 0 auto;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     background: #f2f2f2;
+     box-shadow: 20px 20px 60px #c9c9c9, -20px -20px 60px #ffffff;
+     border-radius: 30px;
+     padding: 40px;
+ }
+
+ #config-list,
+ #result-config-list {
+     height: 280px;
+     width: 350px;
+     white-space: nowrap;
+     /* Prevent line breaks */
+     overflow-x: auto;
+     /* Enable horizontal scrolling */
+     -webkit-overflow-scrolling: touch;
+     /* Enable momentum scrolling on iOS */
+ }
+
+ /* Text input styles */
+ .input-group {
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 20px;
+ }
+
+ .input-group label {
+     font-size: 1.25rem;
+     color: #777;
+     margin-bottom: 5px;
+ }
+
+ .input-group input[type="text"] {
+     font-size: 1.25rem;
+     color: #444;
+     border: none;
+     outline: none;
+     padding: 15px;
+     border-radius: 20px;
+     background: #f2f2f2;
+     box-shadow: inset 4px 6px 15px #c9c9c9, inset -10px -10px 15px #ffffff;
+ }
+
+ /* Checkbox styles */
+ .checkbox-group {
+     display: flex;
+     align-items: center;
+     margin-bottom: 20px;
+ }
+
+ .checkbox-group label {
+     font-size: 1.25rem;
+     color: #777;
+     margin-left: 10px;
+ }
+
+ .checkbox-group input[type="checkbox"] {
+     height: 25px;
+     width: 25px;
+     margin-right: 10px;
+ }
+
+ .checkbox-group input[type="checkbox"]:checked {
+     background-color: #2fdbb6;
+ }
+
+ /* Config input styles */
+ .config-input-group,
+ .config-result-group {
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 20px;
+ }
+
+ .config-input-group label,
+ .config-result-group label {
+     font-size: 1.25rem;
+     color: #777;
+     margin-bottom: 5px;
+ }
+
+ .config-input-group textarea,
+ .config-result-group input {
+     align-self: center;
+     height: 8rem;
+     width: 19rem;
+     font-size: 1.25rem;
+     color: #444;
+     border: none;
+     outline: none;
+     padding: 12px;
+     border-radius: 20px;
+     background: #f2f2f2;
+     box-shadow: inset 5px 5px 15px #c9c9c9, inset -10px -10px 15px #ffffff;
+ }
+
+ .config-result-group input {
+     height: 2rem;
+ }
+
+ /* Add button styles */
+ #add-config-button {
+     font-size: 2rem;
+     color: #fff;
+     background-color: #2fdbb6;
+     border: none;
+     outline: none;
+     padding: 10px 20px;
+     border-radius: 50%;
+     box-shadow: 10px 10px 15px #c9c9c9, -10px -10px 15px #ffffff;
+     margin-bottom: 20px;
+ }
+
+ #add-config-button:hover {
+     cursor: pointer;
+ }
+
+ /* generate button styles */
+ #generate-button {
+     font-size: 1.5rem;
+     color: #fff;
+     background-color: #2fdbb6;
+     border: none;
+     outline: none;
+     padding: 10px 20px;
+     border-radius: 20px;
+     width: 100%;
+     margin-bottom: 1rem;
+ }
+
+ #generate-button:hover {
+     cursor: pointer;
+ }
+
+ .thanks {
+     text-align: center;
+ }
+
+ .thanks a {
+     color: #db2f4f;
+     text-decoration: none;
+ }

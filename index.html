@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h2>Edit a group of V2ray config</h2>
+            <h3>Supported protocols :</h3>
+            <h5>Vmess (ws , grpc , tcp) & Vless and Trojan (ws , grpc)</h5>
+            <div class="input-group">
+                <label for="address">Address:</label>
+                <input id="address" name="address" type="text">
+            </div>
+            <div class="input-group">
+                <label for="host">Host:</label>
+                <input id="host" name="host" type="text">
+            </div>
+            <div class="input-group">
+                <label for="sni">SNI:</label>
+                <input id="sni" name="sni" type="text">
+            </div>
+            <div class="input-group">
+                <label for="port">Port:</label>
+                <input id="port" name="port" type="text">
+            </div>
+            <div class="checkbox-group">
+                <input id="tls" name="tls" type="checkbox">
+                <label for="tls">Use TLS</label>
+            </div>
+
+            <div id="config-list">
+                <div class="config-input-group">
+                    <label for="config-1">Config list 1:</label>
+                    <textarea id="config-1" name="config-1"></textarea>
+                </div>
+
+                <button id="add-config-button" class="button" type="button" title="Add new Config List input">+</button>
+            </div>
+
+            <button id="generate-button" class="button" type="submit">Generate</button>
+
+            <div id="result-config-list">
+                <div class="config-result-group">
+                    <label for="result-1">result list 1:</label>
+                    <input id="result-1" name="result-1"></input>
+                </div>
+            </div>
+            <h3 class="thanks">Special thanks to <a href="https://github.com/rahgozar94725">Rahgozar</a> ❤️</h3>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
