@@ -148,3 +148,12 @@
      color: #db2f4f;
      text-decoration: none;
  }
+
+ .source {
+     text-align: center;
+ }
+
+ .source a {
+     color: #737373;
+     text-decoration: none;
+ }
