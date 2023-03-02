@@ -187,7 +187,7 @@ const loopConfigs = (configObject, address, host, sni, port, useTLS) => {
 }
 
 const copy = () => {
-    const inputs = document.querySelectorAll('#result-config-list input');
+    const inputs = document.querySelectorAll('#result-config-list textarea');
     inputs.forEach(input => {
         input.addEventListener('click', () => {
             navigator.clipboard.writeText(input.value).then(
@@ -213,7 +213,7 @@ const showResult = resultObject => {
 
         html += `<div class="config-result-group">
             <label for="${key}">result list ${i}:</label>
-            <input id="${key}" name="${key}" value="${text}">
+            <textarea id="${key}" name="${key}">${text}</textarea>
         </div>`;
 
         i++;
