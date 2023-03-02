@@ -91,7 +91,7 @@
  }
 
  .config-input-group textarea,
- .config-result-group input {
+ .config-result-group textarea {
      align-self: center;
      height: 8rem;
      width: 19rem;
@@ -105,9 +105,6 @@
      box-shadow: inset 5px 5px 15px #c9c9c9, inset -10px -10px 15px #ffffff;
  }
 
- .config-result-group input {
-     height: 2rem;
- }
 
  /* Add button styles */
  #add-config-button {
