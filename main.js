@@ -109,7 +109,7 @@ const vlessGenerator = (configString, address, host, sni, port, useTLS) => {
     // Customize config for type=ws
     if (type === "ws") {
         if (useTLS) {
-            configString = configString.replace(/security=none/g, `encryption=none&security=tls&sni=${sni}&alpn=http%2F1.1&fp=chrome&type=ws&host=${host}`);
+            configString = configString.replace(/security=none/g, `&security=tls&sni=${sni}&alpn=http%2F1.1&fp=chrome&type=ws&host=${host}`);
         }
         if (configString.includes("wss")) {
             configString = configString.replace(/#/g, "%3Fed%3D2048%2F#");
@@ -122,7 +122,9 @@ const vlessGenerator = (configString, address, host, sni, port, useTLS) => {
             configString = configString.replace(/security=none/g, `security=tls&sni=${sni}&alpn=h2&fp=chrome`);
         }
     }
-    configString = configString.replace(/type=ws&/, "");
+    configString = configString.replace(/\?type=ws&/g, '?');
+
+    console.log(configString)
     return configString;
 }
 
@@ -155,7 +157,7 @@ const trojanGenerator = (configString, address, host, sni, port, useTLS) => {
         }
     }
     configString = configString.replace(/type=grpc&/, "");
-    configString = configString.replace(/type=ws&/, "");
+    configString = configString.replace(/\?type=ws&/g, '?');
     return configString;
 }
 
